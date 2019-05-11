@@ -1,0 +1,8 @@
+rabbitmq:
+  host: ${RABBITMQ_HOST:172.17.0.2}
+  queueName: ${RABBITMQ_QUEUE_NAME:apix-notification-queue}
+
+twilio:
+  accountSid: ${TWILIO_ACCOUNT_SID:ACc1542cbb8a4e4b6cdbd0679a15b867bf}
+  authToken: ${TWILIO_AUTH_TOKEN:880ef8cc0353accb380931eccde4d46f}
+  from: ${TWILIO_FROM_AUTH_TOKEN:+16609569836}
