@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
 import org.springframework.boot.runApplication
 
-@SpringBootApplication( exclude = [ RabbitAutoConfiguration::class ])
+@SpringBootApplication
 class ApixNotificationKotlinApplication
 
 fun main(args: Array<String>) {

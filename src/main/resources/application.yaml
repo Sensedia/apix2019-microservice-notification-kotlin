@@ -5,4 +5,4 @@ rabbitmq:
 twilio:
   accountSid: ${TWILIO_ACCOUNT_SID:your_account_sid}
   authToken: ${TWILIO_AUTH_TOKEN:your_auth_token}
-  from: ${TWILIO_FROM_AUTH_TOKEN:your_twilio_phone}
+  from: ${TWILIO_FROM:your_twilio_phone}
