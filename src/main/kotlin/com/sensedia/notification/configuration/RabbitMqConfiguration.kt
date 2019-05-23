@@ -37,7 +37,7 @@ class RabbitMqConfiguration(
         val QUEUE_NAME = queueName
         channel.queueDeclare(QUEUE_NAME, true, false, false, null)
 
-        println(" [*] Waiting for messages")
+        logger.info(" >>> Waiting for messages")
 
         val deliverCallback = { consumerTag: String, delivery: Delivery ->
             val to = delivery.properties.headers["to"].toString()

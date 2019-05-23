@@ -1,0 +1,19 @@
+version: '2'
+services:
+  apix2019-microservice-notification-kotlin:
+    image: sensedia/apix2019-microservice-notification-kotlin
+    container_name: notification
+    mem_limit: 128M
+    ports:
+      - "4040:8080"
+    environment:
+      TWILIO_ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
+      TWILIO_AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
+      TWILIO_FROM_PHONE: ${TWILIO_FROM_PHONE}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+    networks:
+      - apix2019
+networks:
+  apix2019:
+    external:
+      name: apix2019

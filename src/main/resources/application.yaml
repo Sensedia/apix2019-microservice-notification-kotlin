@@ -1,5 +1,5 @@
 rabbitmq:
-  host: ${RABBITMQ_HOST:172.17.0.2}
+  host: ${RABBITMQ_HOST:localhost}
   queueName: ${RABBITMQ_QUEUE_NAME:apix-notification-queue}
 
 twilio:

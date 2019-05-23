@@ -23,10 +23,7 @@ class TwilioService {
         val message = Message.creator(
                 PhoneNumber(to),
                 PhoneNumber(twilioConfiguration.from),
-                body)
-            .setMediaUrl(
-                Arrays.asList(URI.create("https://d9hhrg4mnvzow.cloudfront.net/www.apix.com.br/1b64d6cd-logo-white_05v02g05s02e000000001.png")))
-            .create()
+                body).create()
 
         System.out.println(message.sid)
     }
