@@ -1,8 +1,8 @@
 rabbitmq:
-  host: ${RABBITMQ_HOST:localhost}
+  host: ${RABBITMQ_HOST}
   queueName: ${RABBITMQ_QUEUE_NAME:apix-notification-queue}
 
 twilio:
-  accountSid: ${TWILIO_ACCOUNT_SID:your_account_sid}
-  authToken: ${TWILIO_AUTH_TOKEN:your_auth_token}
-  from: ${TWILIO_FROM_AUTH_TOKEN:your_twilio_phone}
+  accountSid: ${TWILIO_ACCOUNT_SID}
+  authToken: ${TWILIO_AUTH_TOKEN}
+  from: ${TWILIO_FROM_PHONE}

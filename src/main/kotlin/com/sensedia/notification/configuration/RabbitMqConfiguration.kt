@@ -23,6 +23,8 @@ class RabbitMqConfiguration(
 
     var logger = LoggerFactory.getLogger(RabbitMqConfiguration::class.java)
 
+    val MESSAGE = "There are combinations available for the requested kit. To visualize them, access PobreFit."
+
     @Autowired
     lateinit var twilioService: TwilioService
 
@@ -35,19 +37,16 @@ class RabbitMqConfiguration(
         val channel = connection.createChannel()
 
         val QUEUE_NAME = queueName
-        channel.queueDeclare(QUEUE_NAME, true, false, false, null)
 
         logger.info(" >>> Waiting for messages")
 
         val deliverCallback = { consumerTag: String, delivery: Delivery ->
-            val to = delivery.properties.headers["to"].toString()
+            val phone = String(delivery.body, Charset.forName("UTF-8"))
 
-            val message = String(delivery.body, Charset.forName("UTF-8"))
-
-            logger.info(" >>> Received '$message'")
+            logger.info(" >>> Received '$MESSAGE'")
             logger.info(" >>> Sending to Twilio...")
 
-            twilioService.send(message, to)
+            twilioService.send(MESSAGE, phone)
             logger.info(" >>> Message sent successfully !!!")
 
         }
