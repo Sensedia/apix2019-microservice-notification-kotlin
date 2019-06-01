@@ -39,6 +39,21 @@ OBS: Caso haja problemas com porta já alocada, entre no arquivo 'application.ym
 5 - No terminal, dentro da pasta raiz do projeto, execute o comando:
 `java -jar -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n ./target/apix2019-microservice-notification-kotlin-0.0.1-SNAPSHOT.jar`. Lembre-se de colocar o número correto da porta de debug no atributo 'address' deste comando de acordo com o configurado na IDE;
 
+
+### Como testar se o microserviço está disparando a mensagem SMS adequadamente:
+
+Opção 1 - Para testar o fluxo completo, acesse o README do microserviço de kit e inicie criando um kit, fazendo o post descrito lá. Para testar o fluxo desde a entrada, é necessário que os microserviços de kit, crawler e finder estejam rodando.
+
+Opção 2 - Para testar esse microserviço isoladamente, você pode postar uma mensagem diretamente na fila 'apix-notification-queue', com o seguinte payload:
+
+```
+{  
+   "phone":"19999999999",
+   "numberOfCombinationsFound": 3
+}
+
+```
+
 ##### Para acessar o console de administração do RabbitMQ:
 http://[docker host IP]:15672/#/
 
