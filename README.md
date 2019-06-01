@@ -1,6 +1,6 @@
 # apix2019-microservice-notification-kotlin :iphone:
 
-### Como usar com docker:
+### Como executar via docker:
 
 1 - Execute o script 'generate-image.sh', presente na pasta raiz do projeto, para gerar a imagem docker da aplicação;
 
@@ -10,7 +10,7 @@
 
 OBS: Caso tenha feito alguma alteração de código, gere novamente a imagem docker usando o comando 'generate-image.sh' e depois use o comando 'update-notification.sh', na pasta 'docker', para subir um novo container do docker. 
 
-### Como usar localmente:
+### Como executar localmente:
 
 1 - Edite o arquivo 'variables.sh' presente dentro da pasta 'docker' com os valores das variáveis TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN e TWILIO_FROM_PHONE com as informações presentes em sua conta do Twilio para que o envio de mensagens seja realizado corretamente;
 
@@ -26,7 +26,7 @@ OBS: Caso haja problemas com porta já alocada, entre no arquivo 'application.ym
 `server:
     port: numero_da_porta`
 
-### Como realizar debug da aplicação:
+### Como fazer debug da aplicação:
 
 1 - Realizar os passos da seção "Como usar localmente" exceto o item 5;
 
