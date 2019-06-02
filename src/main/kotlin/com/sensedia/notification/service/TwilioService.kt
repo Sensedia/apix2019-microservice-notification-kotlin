@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service
 @Service
 class TwilioService {
 
-    // TODO
-    // Colocar aqui a integração com o Twilio
+    // TODO: Na boa, faz quanto tempo que você não envia um SMS? Bora matar a saudade :D
 
 }
