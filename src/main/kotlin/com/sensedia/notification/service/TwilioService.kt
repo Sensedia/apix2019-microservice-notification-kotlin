@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service
 @Service
 class TwilioService {
 
-    // TODO: Na boa, faz quanto tempo que você não envia um SMS? Bora matar a saudade :D
+    fun send(body: String, to: String) {
+
+        // TODO:  Na boa, faz quanto tempo que você não envia um SMS?! Bora matar a saudade :D
+    }
 
 }
