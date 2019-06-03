@@ -15,4 +15,4 @@ services:
 networks:
   apix2019:
     external:
-      name: apix2019-infra_apix2019
+      name: apix2019infra_apix2019
