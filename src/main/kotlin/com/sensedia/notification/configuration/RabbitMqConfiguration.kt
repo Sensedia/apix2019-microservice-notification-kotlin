@@ -49,7 +49,7 @@ class RabbitMqConfiguration(
             val numberOfCombinations = jsonObj.get("numberOfCombinationsFound").asInt
 
             val message = if (numberOfCombinations > 0)
-                "There are $numberOfCombinations combinations available for the requested kit. To visualize them, access PobreFit."
+                "There are $numberOfCombinations combinations available for the requested kit. To visualize them, access BaratoFit."
             else "Unfortunately we haven't any combinations for the requested kit."
 
             logger.info(" >>> Sending to Twilio...")
