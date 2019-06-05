@@ -48,7 +48,7 @@ Opção 2 - Para testar esse microserviço isoladamente, você pode postar uma m
 
 ```
 {  
-   "phone":"19999999999",
+   "phone":"+5519999999999",
    "numberOfCombinationsFound": 3
 }
 
